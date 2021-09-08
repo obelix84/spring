@@ -17,4 +17,9 @@ public class CartConfiguration {
     public Cart cart(ProductRepository productRepository) {
         return new Cart(productRepository);
     }
+
+    @Bean
+    public OrderRepository orderRepository() {
+        return new OrderRepository();
+    }
 }

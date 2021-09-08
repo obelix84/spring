@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product add</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders add</title>
+</head>
+<body>
+<form action="#" th:action="@{/repository/add}" th:object="${product}" method="post">
+    ID:<input type="text" th:field="*{id}" /></br>
+    Name:<input type="text" th:field="*{name}" /></br>
+    Cost:<input type="text" th:field="*{price}" /></br>
+    <button type="submit" name="addRow">Submit</button>
+</form>
+</body>
+</html>
+
+</body>
+</html>

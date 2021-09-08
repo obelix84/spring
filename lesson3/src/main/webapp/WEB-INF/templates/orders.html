@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+</head>
+<body>
+<div>
+
+    <h2>Repository</h2>
+
+    <table>
+        <tbody>
+        <tr th:each="o : ${allOrders}">
+            <td th:text="${{o.id}}"></td>
+            <td th:text="${{o.date}}"></td>
+            <td th:text="${{o.cost}}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

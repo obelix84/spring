@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders add</title>
+</head>
+<body>
+    <form action="#" th:action="@{/orders/add}" th:object="${order}" method="post">
+        ID:<input type="text" th:field="*{id}" /></br>
+        Date:<input type="text" th:field="*{date}" /></br>
+        Cost:<input type="text" th:field="*{cost}" /></br>
+        <button type="submit" name="addRow">Submit</button>
+    </form>
+</body>
+</html>

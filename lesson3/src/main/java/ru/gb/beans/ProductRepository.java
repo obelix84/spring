@@ -18,6 +18,10 @@ public class ProductRepository {
         return products.stream().filter(product -> product.getId() == id).findFirst();
     }
 
+    public void add(Product product) {
+        this.products.add(product);
+    }
+
     public List<Product> getAll() {
         return products;
     }
