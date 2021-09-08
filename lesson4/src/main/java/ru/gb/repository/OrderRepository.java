@@ -32,7 +32,7 @@ public class OrderRepository {
     }
 
     public void remove(int id) {
-        Order order = getOrder(id).orElseThrow(null);
+        Order order = getOrder(id).orElseThrow();
         this.orders.remove(order);
     }
 

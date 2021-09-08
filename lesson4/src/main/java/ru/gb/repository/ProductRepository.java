@@ -31,7 +31,7 @@ public class ProductRepository {
     }
 
     public void remove(int id) {
-        Product product = getProduct(id).orElseThrow(null);
+        Product product = getProduct(id).orElseThrow();
         this.products.remove(product);
     }
 
