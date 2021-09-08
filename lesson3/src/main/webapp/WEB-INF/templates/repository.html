@@ -1,0 +1,15 @@
+<html>
+<div>
+
+    <h2>Repository</h2>
+
+    <table>
+        <tbody>
+        <tr th:each="p : ${allProducts}">
+            <td th:text="${{p.id}}">13/01/2011</td>
+            <td th:text="${{p.name}}">yes</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>
