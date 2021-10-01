@@ -61,18 +61,6 @@ public class ProductMVCController {
     }
 
 
-//    @GetMapping("/paginated")
-//    public String findAllPaginated(Model model, @RequestParam("page") Optional<Integer> page,
-//                                   @RequestParam("size") Optional<Integer> size) {
-//        long countOfProducts = repository.count();
-//        //тут я привел к int, но это не очень хорошо...
-//        Pageable pageable = PageRequest.of(page.orElse(0), size.orElse((int)countOfProducts));
-//        List<Product> products = new ArrayList<>();
-//        repository.findAll(pageable).forEach(products::add);
-//        model.addAttribute("products", products);
-//        return "products";
-//    }
-
     @PostMapping
     public String save(@Valid Product product, BindingResult result) {
         if (result.hasErrors()) {
@@ -83,9 +71,9 @@ public class ProductMVCController {
     }
 
     //очень упрощенно, но пусть бужет
-//    @ExceptionHandler
-//    public String handleException(RuntimeException ex) {
-//        return "product-err";
-//    }
+    @ExceptionHandler
+    public String handleException(RuntimeException ex) {
+        return "product-err";
+    }
 
 }
