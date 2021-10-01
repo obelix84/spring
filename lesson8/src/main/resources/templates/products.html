@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <a href="mvc/form">add form</a>
+    <ul>
+      <li th:each="product : ${products}">
+          <div th:text="${product.id}"></div>
+          <div th:text="${product.name}"></div>
+          <div th:text="${product.price}"></div>
+          <div><a th:href="@{mvc/delete/{id}(id=${product.id})}">Delete</a></div>
+      </li>
+    </ul>
+    <div th:each="pageNumber : ${pageNumbers}">
+        <a th:href="@{/products/mvc(size=${pageSize}, page=${pageNumber})}"
+           th:text="${pageNumber + 1}"></a>
+    </div>
+</body>
+</html>
