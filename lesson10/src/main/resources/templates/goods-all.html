@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For all users</title>
+</head>
+<body>
+<h1>Goods</h1>
+<ul>
+    <li th:each="good : ${goods}">
+            <div th:text="${good.id}"></div>
+            <div th:text="${good.name}"></div>
+            <div th:text="${good.cost}"></div>
+    </li>
+</ul>
+</body>
+</html>
