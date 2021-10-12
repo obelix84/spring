@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Products</h1>
+<a href="/products/add">Add product</a>
+<a href="/categories/">Categories</a>
+<a href="/categories/add">Add category</a>
+<a href="/cart">Cart</a>
+<ul>
+    <li th:each="product : ${products}">
+        <div th:text="${product.id}"></div>
+        <div th:text="${product.name}"></div>
+        <div th:text="${product.description}"></div>
+        <div><a th:href="@{cart/add/{id}(id=${product.id})}">Add to cart</a></div>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All categories</title>
+</head>
+<body>
+<ul>
+    <li th:each="cat : ${categories}">
+        <div th:text="${cat.id}"></div>
+        <div th:text="${cat.name}"></div>
+    </li>
+</ul>
+</body>
+</html>
