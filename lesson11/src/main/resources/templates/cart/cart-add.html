@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add category</title>
+</head>
+<body>
+<h1>Add product to cart</h1>
+<form action="#" th:action="@{/cart/add}" method="post" th:object="${cart}">
+    <input type="text" th:field="*{name}" id="name" placeholder="name">
+    <input type="text" th:field="*{name}" id="name" placeholder="name">
+    <input type="submit" value="Create">
+</form>
+</body>
+</html>
